@@ -1,0 +1,9 @@
+ ---Disco em 100% como resolver
+Executar Prompt como administrador e digite o seguinte código
+
+	Dism /Online /Cleanup-Image /ScanHealth
+
+Ao terminar a verificação, digite este outro comando:
+	Dism /Online /Cleanup-Image /RestoreHealth
+
+Reinicie o seu computador e confira se o problema foi resolvido.
