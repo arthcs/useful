@@ -1,1 +1,0 @@
-SEC_TO_TIME(sum(TIME_TO_SEC(TIMEDIFF(hora_final,hora_inicial)))) as utilizado
