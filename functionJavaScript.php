@@ -5,6 +5,7 @@
         return numero.join(',');
     }
 
+    //teste
 	var x = numberToReal(9999000.33);
 	console.log(x);
 
@@ -16,7 +17,7 @@
 	
 //melhor utilizada
 $(document).ready(function() {
-		$("input, select, textarea").attr("disabled", "true");
+		//$("input, select, textarea").attr("disabled", "true");
 
 		var numero = document.getElementById('valorProcedimento').value;
 		// console.log(numero);

@@ -1,5 +1,12 @@
 <?php
 
+//Busca dados e traz um objeto;
+$queryVersao = "SELECT * FROM tb_aux_schemas WHERE versao = '$versaoSelecionada'";
+$stmVersao = $conn->prepare($queryVersao);
+$stmVersao->execute();
+
+$dadosVersao = $stmVersao->fetchObject();
+
 // DDL para redefinir a seguencia em tabelas do Postgresql
 	ALTER SEQUENCE payments_id_seq RESTART WITH 22;
 
