@@ -55,3 +55,36 @@ Explicando na prática:
 O que acontece é o seguinte, essa expressão agrupa 3 caracteres: (?:...), e faz a captura antes deles: ?=, o que garante que isso seja feito de trás pra frente infinitas vezes é o: *$, aplicando o split o número 1000000 ficaria dividido assim: 1|000|000, depois é só ele juntar com um ponto .join('.') que a mágica está feita.
 
 OBS.: O grupo de não captura ?: serve para não atrapalhar na hora de capturar o que realmente importa, que é antes dos 3 caracteres.
+
+
+
+<script type="text/javascript">
+	//função que calcula diferença entre datas
+	$('#data_desembarque').blur(
+    function() {
+      //var cod = $('#codigo_beneficiario').val(); //Pegando o id
+
+	var d1 = new Date($('#data_embarque').val());
+	var d2 = new Date($('#data_desembarque').val());
+	
+	if (d1 != null && d2 != null) {
+
+		//$('#dias_utilizados').val( Math.round( (d2.getTime() - d1.getTime()) / (1000*60*60*24) ) +1);
+
+      var diffMilissegundos = d2 - d1;
+
+      var diffSegundos = diffMilissegundos / 1000;
+      var diffMinutos = diffSegundos / 60;
+      var diffHoras = diffMinutos / 60;
+      var diffDias = diffHoras / 24;
+      //var diffMeses = diffDias / 30;
+
+      $('#dias_utilizados').val(diffDias);
+
+		} else {
+			$('#dias_utilizados').val(0);
+		}
+
+    }
+);
+</script>
