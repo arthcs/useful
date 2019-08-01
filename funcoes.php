@@ -135,34 +135,3 @@ function charset_decode_utf_8 ($string) {
 $seuTextoTransformado = charset_decode_utf_8($textoATransformar);
 echo $seuTextoTransformado;
 ?>
-<script type="text/javascript">
-	//valida codigo CPF
-	function validarCPF(strCPF) {
-
-	      strCPF = strCPF.replace(/[^\d]+/g,'');
-	      var Soma;
-	      var Resto;
-	      Soma = 0;
-	      if (strCPF == "00000000000") return false;
-
-	      for (var i = 0; i < 10; i++) {
-	         var nulo = ""+i+i+i+i+i+i+i+i+i+i+i;
-	         console.log(nulo);
-	         if (strCPF == nulo) return false;
-	       }
-	       
-	      for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
-	      Resto = (Soma * 10) % 11;
-	       
-	      if ((Resto == 10) || (Resto == 11))  Resto = 0;
-	      if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
-	       
-	      Soma = 0;
-	      for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
-	      Resto = (Soma * 10) % 11;
-	       
-	      if ((Resto == 10) || (Resto == 11))  Resto = 0;
-	      if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
-	      return true;
-	  }
-</script>
