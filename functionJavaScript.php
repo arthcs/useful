@@ -97,7 +97,7 @@ OBS.: O grupo de não captura ?: serve para não atrapalhar na hora de capturar 
 	      var Soma;
 	      var Resto;
 	      Soma = 0;
-	      if (strCPF == "00000000000") return false;
+	      //if (strCPF == "00000000000") return false;
 
 	      for (var i = 0; i < 10; i++) {
 	         var nulo = ""+i+i+i+i+i+i+i+i+i+i+i;
