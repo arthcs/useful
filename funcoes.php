@@ -45,6 +45,8 @@ Problema com as tabs, bug onde elas não são selecionas
 	$(document).on("show.bs.tab", function() {
 		$(".dropdown-item").removeClass("show");
 		$(".dropdown-item").removeClass("active");
+		$(".tab-pane").removeClass("show");
+		$(".tab-pane").removeClass("active");
 	});
 
 	
