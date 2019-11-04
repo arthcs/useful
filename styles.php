@@ -13,4 +13,12 @@
       font-weight: normal;
       padding-right: 25px;
     }
+
+
+    /*Bloqueia o select*/
+    select[readonly]{
+      background: #eee; /*Simular campo inativo - Sugestão @GabrielRodrigues*/
+      pointer-events: none;
+      touch-action: none;
+    }
   </style>
